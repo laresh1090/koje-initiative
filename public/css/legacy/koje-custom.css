@@ -1,0 +1,1094 @@
+/*
+ * Koje Initiative - Custom CSS Overrides
+ * Loaded AFTER style.css to override template defaults.
+ *
+ * Table of Contents:
+ * 1. Custom Variables
+ * 2. Typography Refinements
+ * 3. Active Nav Highlighting
+ * 4. Breadcrumb Customizations
+ * 5. Button Variants
+ * 6. Event Type Badges
+ * 7. Arm Cards
+ * 8. Vendor Cards
+ * 9. Form Components
+ * 10. File Upload
+ * 11. Tab Navigation (Events & Contact)
+ * 12. Accordion / FAQ Refinements
+ * 13. Gallery Grid
+ * 14. Filter Navigation
+ * 15. Badge / Tag System
+ * 16. Impact Stats
+ * 17. Timeline
+ * 18. Vendor Form Steps
+ * 19. Event Status Indicators
+ * 20. Contact Form Switching
+ * 21. Footer Customizations
+ * 22. Animation Additions
+ * 23. Responsive Additions
+ */
+
+
+/* ============================================================
+   1. CUSTOM VARIABLES
+   ============================================================ */
+
+:root {
+  /* Extended color shades for depth */
+  --koje-primary-light: #F4754A;
+  --koje-primary-dark: #C9440A;
+  --koje-secondary-light: #FBB54A;
+  --koje-secondary-dark: #D88A0F;
+
+  /* Semantic colors */
+  --koje-success: #2ECC71;
+  --koje-warning: #F39C12;
+  --koje-error: #E74C3C;
+  --koje-info: #3498DB;
+
+  /* Vendor status colors */
+  --koje-status-open: #2ECC71;
+  --koje-status-closed: #E74C3C;
+  --koje-status-pending: #F39C12;
+
+  /* Event type badge colors */
+  --koje-badge-market: #EB5310;
+  --koje-badge-screen: #FAA019;
+  --koje-badge-summit: #1E252F;
+
+  /* Shadows for premium minimal feel */
+  --koje-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --koje-shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --koje-shadow-lg: 0 4px 40px rgba(0, 0, 0, 0.08);
+  --koje-shadow-card-hover: 0 8px 30px rgba(235, 83, 16, 0.12);
+
+  /* Transition presets */
+  --koje-transition-fast: 0.2s ease;
+  --koje-transition-default: 0.4s ease;
+  --koje-transition-slow: 0.6s ease;
+
+  /* Border radius presets */
+  --koje-radius-sm: 6px;
+  --koje-radius-md: 10px;
+  --koje-radius-lg: 16px;
+  --koje-radius-xl: 20px;
+  --koje-radius-pill: 999px;
+
+  /* Z-index scale */
+  --koje-z-dropdown: 10;
+  --koje-z-sticky: 50;
+  --koje-z-modal: 100;
+  --koje-z-sidebar: 999;
+  --koje-z-preloader: 999999;
+}
+
+
+/* ============================================================
+   TEXT LOGO
+   ============================================================ */
+
+.logo-text {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(20px, 1.58vw, 28px);
+  color: var(--ul-black);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.logo-text--white {
+  color: var(--white);
+}
+
+.ul-footer-about .logo-text {
+  font-size: clamp(18px, 1.37vw, 24px);
+}
+
+.ul-sidebar-header-logo .logo-text {
+  font-size: clamp(18px, 1.37vw, 24px);
+}
+
+
+/* ============================================================
+   2. TYPOGRAPHY REFINEMENTS
+   ============================================================ */
+
+/* Slightly increase letter-spacing on body text for airiness */
+body {
+  letter-spacing: 0.01em;
+}
+
+/* Tighten heading letter-spacing for premium feel */
+.ul-section-title,
+.ul-breadcrumb-title,
+.ul-banner-title {
+  letter-spacing: -0.03em;
+}
+
+/* Increase line-height on card titles for readability */
+.ul-blog-title,
+.ul-event-title {
+  line-height: 1.3;
+}
+
+/* Caveat accent usage -- section sub-titles can optionally use Caveat */
+.ul-section-sub-title.koje-accent {
+  font-family: var(--font-caveat);
+  font-size: clamp(18px, 1.26vw, 24px);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+
+/* ============================================================
+   3. ACTIVE NAV HIGHLIGHTING
+   ============================================================ */
+
+.ul-header-nav > a.active,
+.ul-header-nav > .has-sub-menu.active > a {
+  color: var(--ul-primary) !important;
+  position: relative;
+}
+
+.ul-header-nav > a.active::after,
+.ul-header-nav > .has-sub-menu.active > a[role="button"]::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--ul-primary);
+  border-radius: 50%;
+}
+
+
+/* ============================================================
+   4. BREADCRUMB CUSTOMIZATIONS
+   ============================================================ */
+
+/* Add subtle orange gradient overlay instead of pure dark */
+.ul-breadcrumb::before {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 37, 47, 0.92) 0%,
+    rgba(30, 37, 47, 0.85) 50%,
+    rgba(235, 83, 16, 0.15) 100%
+  );
+}
+
+/* Subtitle beneath breadcrumb title */
+.ul-breadcrumb-subtitle {
+  font-family: var(--font-primary);
+  font-size: clamp(14px, 0.95vw, 18px);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  margin-top: clamp(8px, 0.53vw, 10px);
+  margin-bottom: clamp(10px, 0.79vw, 15px);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reduce breadcrumb padding slightly for a more minimal feel */
+.ul-breadcrumb {
+  padding: clamp(40px, 7vw, 140px) 0 clamp(35px, 6.5vw, 130px);
+}
+
+
+/* ============================================================
+   5. BUTTON VARIANTS
+   ============================================================ */
+
+/* Outline-only button */
+.ul-btn--outline {
+  background-color: transparent;
+  border-color: var(--ul-primary);
+  color: var(--ul-primary);
+}
+.ul-btn--outline:hover {
+  background-color: var(--ul-primary);
+  color: var(--white);
+}
+.ul-btn--outline i {
+  background-color: var(--ul-primary);
+  color: var(--white);
+}
+
+/* Dark button (for forms on orange backgrounds) */
+.ul-btn--dark {
+  background-color: var(--ul-black);
+  border-color: var(--ul-black);
+  color: var(--white);
+}
+.ul-btn--dark:hover {
+  background-color: transparent;
+  border-color: var(--ul-black);
+  color: var(--ul-black);
+}
+.ul-btn--dark i {
+  background-color: var(--white);
+  color: var(--ul-black);
+}
+
+/* Small button variant */
+.ul-btn--sm {
+  height: clamp(36px, 2.2vw, 42px);
+  font-size: clamp(12px, 0.74vw, 14px);
+  padding-right: clamp(10px, 0.74vw, 14px);
+}
+.ul-btn--sm i {
+  width: clamp(26px, 1.7vw, 32px);
+  font-size: clamp(9px, 0.58vw, 11px);
+}
+
+/* Full-width button (for forms) */
+.ul-btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Link-style button (no background) */
+.ul-btn--link {
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+  color: var(--ul-primary);
+  font-weight: 700;
+  gap: clamp(5px, 0.42vw, 8px);
+}
+.ul-btn--link:hover {
+  color: var(--ul-secondary);
+  background: none;
+  border: none;
+}
+.ul-btn--link i {
+  background: none;
+  color: inherit;
+  width: auto;
+}
+
+
+/* ============================================================
+   6. EVENT TYPE BADGES
+   ============================================================ */
+
+/* Event card hover shadow */
+.ul-event {
+  transition: box-shadow var(--koje-transition-default);
+}
+.ul-event:hover {
+  box-shadow: var(--koje-shadow-lg);
+}
+
+/* Event type badge */
+.koje-event-type-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--koje-radius-pill);
+  font-size: clamp(11px, 0.68vw, 13px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.koje-event-type-badge--market {
+  background-color: var(--koje-badge-market);
+  color: var(--white);
+}
+.koje-event-type-badge--screen {
+  background-color: var(--koje-badge-screen);
+  color: var(--white);
+}
+.koje-event-type-badge--summit {
+  background-color: var(--koje-badge-summit);
+  color: var(--white);
+}
+
+
+/* ============================================================
+   7. ARM CARDS
+   ============================================================ */
+
+.koje-arm-card {
+  background-color: var(--white);
+  border-radius: var(--koje-radius-xl);
+  overflow: hidden;
+  transition: box-shadow var(--koje-transition-default),
+              transform var(--koje-transition-default);
+}
+.koje-arm-card:hover {
+  box-shadow: var(--koje-shadow-card-hover);
+  transform: translateY(-4px);
+}
+.koje-arm-card-img {
+  position: relative;
+  overflow: hidden;
+}
+.koje-arm-card-img img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.koje-arm-card:hover .koje-arm-card-img img {
+  transform: scale(1.05);
+}
+.koje-arm-card-txt {
+  padding: clamp(20px, 1.58vw, 30px);
+}
+.koje-arm-card-title {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(20px, 1.26vw, 24px);
+  margin-bottom: clamp(8px, 0.53vw, 10px);
+}
+.koje-arm-card-descr {
+  color: var(--ul-p);
+  font-size: clamp(13px, 0.84vw, 16px);
+  margin-bottom: clamp(15px, 1.05vw, 20px);
+}
+
+
+/* ============================================================
+   8. VENDOR CARDS
+   ============================================================ */
+
+.koje-vendor-card {
+  background-color: var(--white);
+  border: 1px solid var(--ul-gray3);
+  border-radius: var(--koje-radius-lg);
+  padding: clamp(15px, 1.26vw, 24px);
+  text-align: center;
+  transition: border-color var(--koje-transition-default),
+              box-shadow var(--koje-transition-default);
+}
+.koje-vendor-card:hover {
+  border-color: var(--ul-primary);
+  box-shadow: var(--koje-shadow-md);
+}
+.koje-vendor-card-logo {
+  width: clamp(80px, 5.25vw, 100px);
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  margin: 0 auto clamp(12px, 0.84vw, 16px);
+  border-radius: var(--koje-radius-md);
+}
+.koje-vendor-card-name {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(16px, 1.05vw, 20px);
+  margin-bottom: clamp(4px, 0.32vw, 6px);
+}
+.koje-vendor-card-category {
+  font-size: clamp(12px, 0.74vw, 14px);
+  color: var(--ul-gray);
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   9. FORM COMPONENTS
+   ============================================================ */
+
+/* Standard form input (light background pages) */
+.koje-form-input {
+  width: 100%;
+  background-color: var(--ul-gray3);
+  border: 1px solid var(--ul-gray3);
+  border-radius: var(--koje-radius-sm);
+  height: clamp(48px, 3.15vw, 60px);
+  padding: 0 clamp(12px, 0.95vw, 18px);
+  font-family: var(--font-primary);
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-black);
+  transition: border-color var(--koje-transition-fast);
+}
+.koje-form-input:focus {
+  border-color: var(--ul-primary);
+  outline: none;
+}
+.koje-form-input::placeholder {
+  color: var(--ul-gray);
+  font-weight: 400;
+}
+
+/* Textarea */
+.koje-form-textarea {
+  height: clamp(120px, 9.35vw, 178px);
+  padding: clamp(12px, 0.95vw, 18px);
+  resize: vertical;
+}
+
+/* Form label */
+.koje-form-label {
+  display: block;
+  font-weight: 600;
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-black);
+  margin-bottom: clamp(6px, 0.42vw, 8px);
+}
+
+/* Form group */
+.koje-form-group {
+  margin-bottom: clamp(15px, 1.26vw, 24px);
+}
+
+/* Form error state */
+.koje-form-input.error {
+  border-color: var(--koje-error);
+}
+.koje-form-error-text {
+  color: var(--koje-error);
+  font-size: clamp(12px, 0.68vw, 13px);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Form success state */
+.koje-form-input.success {
+  border-color: var(--koje-success);
+}
+
+/* Override SlimSelect styles for Koje */
+.ss-main {
+  border: 1px solid var(--ul-gray3) !important;
+  border-radius: var(--koje-radius-sm) !important;
+  background-color: var(--ul-gray3) !important;
+  height: clamp(48px, 3.15vw, 60px) !important;
+  font-family: var(--font-primary) !important;
+}
+.ss-main:focus {
+  border-color: var(--ul-primary) !important;
+}
+.ss-content.ss-open-below {
+  border-radius: var(--koje-radius-sm) !important;
+  border-color: var(--ul-gray2) !important;
+}
+
+
+/* ============================================================
+   10. FILE UPLOAD
+   ============================================================ */
+
+.koje-file-upload {
+  position: relative;
+  border: 2px dashed var(--ul-gray2);
+  border-radius: var(--koje-radius-md);
+  padding: clamp(25px, 2.1vw, 40px);
+  text-align: center;
+  background-color: var(--ul-gray3);
+  transition: border-color var(--koje-transition-fast),
+              background-color var(--koje-transition-fast);
+  cursor: pointer;
+}
+.koje-file-upload:hover,
+.koje-file-upload.dragover {
+  border-color: var(--ul-primary);
+  background-color: var(--ul-c4);
+}
+.koje-file-upload input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.koje-file-upload-icon {
+  font-size: clamp(30px, 2.1vw, 40px);
+  color: var(--ul-primary);
+  margin-bottom: clamp(8px, 0.53vw, 10px);
+}
+.koje-file-upload-text {
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-gray);
+  font-weight: 500;
+}
+.koje-file-upload-text strong {
+  color: var(--ul-primary);
+  font-weight: 700;
+}
+.koje-file-upload-hint {
+  font-size: clamp(11px, 0.68vw, 13px);
+  color: var(--ul-gray2);
+  margin-top: clamp(4px, 0.32vw, 6px);
+}
+
+
+/* ============================================================
+   11. TAB NAVIGATION (Events & Contact)
+   ============================================================ */
+
+/* Events Page Tabs */
+.koje-events-tabs-nav {
+  display: flex;
+  gap: 0;
+  margin-bottom: clamp(25px, 2.1vw, 40px);
+  border-bottom: 2px solid var(--ul-gray3);
+}
+.koje-events-tabs-nav button {
+  padding: clamp(12px, 0.84vw, 16px) clamp(20px, 1.58vw, 30px);
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(16px, 1.05vw, 20px);
+  color: var(--ul-gray);
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color var(--koje-transition-fast),
+              border-color var(--koje-transition-fast);
+  cursor: pointer;
+}
+.koje-events-tabs-nav button:hover {
+  color: var(--ul-black);
+}
+.koje-events-tabs-nav button.active {
+  color: var(--ul-primary);
+  border-bottom-color: var(--ul-primary);
+}
+
+/* Contact Page Form Switcher */
+.koje-contact-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 0.53vw, 10px);
+  margin-bottom: clamp(25px, 2.1vw, 40px);
+}
+.koje-contact-tabs-nav button {
+  padding: clamp(10px, 0.68vw, 13px) clamp(18px, 1.26vw, 24px);
+  border-radius: var(--koje-radius-pill);
+  font-weight: 600;
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-gray);
+  background-color: var(--ul-gray3);
+  border: 1px solid var(--ul-gray3);
+  cursor: pointer;
+  transition: all var(--koje-transition-fast);
+}
+.koje-contact-tabs-nav button:hover {
+  border-color: var(--ul-primary);
+  color: var(--ul-primary);
+}
+.koje-contact-tabs-nav button.active {
+  background-color: var(--ul-primary);
+  border-color: var(--ul-primary);
+  color: var(--white);
+}
+
+
+/* ============================================================
+   12. ACCORDION / FAQ REFINEMENTS
+   ============================================================ */
+
+/* Softer border for premium minimal feel */
+.ul-single-accordion-item {
+  border-color: var(--ul-gray3);
+  background: var(--ul-gray3);
+  border-radius: var(--koje-radius-md);
+}
+.ul-single-accordion-item.open {
+  background: var(--white);
+  border-color: rgba(235, 83, 16, 0.2);
+  box-shadow: var(--koje-shadow-sm);
+}
+
+/* Category grouping for FAQ sections */
+.koje-faq-category-title {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(20px, 1.26vw, 24px);
+  color: var(--ul-black);
+  margin-bottom: clamp(15px, 1.05vw, 20px);
+  margin-top: clamp(30px, 2.1vw, 40px);
+}
+.koje-faq-category-title:first-child {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+   13. GALLERY GRID
+   ============================================================ */
+
+.koje-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 0.79vw, 15px);
+}
+
+.koje-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--koje-radius-lg);
+  cursor: pointer;
+}
+.koje-gallery-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.koje-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Span items for variety */
+.koje-gallery-item--wide {
+  grid-column: span 2;
+}
+.koje-gallery-item--tall {
+  grid-row: span 2;
+}
+.koje-gallery-item--tall img {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+/* Overlay on hover */
+.koje-gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(30, 37, 47, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(15px, 1.26vw, 24px);
+}
+.koje-gallery-item:hover .koje-gallery-item-overlay {
+  opacity: 1;
+}
+.koje-gallery-item-overlay-text {
+  color: var(--white);
+  font-weight: 600;
+  font-size: clamp(14px, 0.84vw, 16px);
+}
+
+
+/* ============================================================
+   14. FILTER NAVIGATION
+   ============================================================ */
+
+.koje-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 0.53vw, 10px);
+  margin-bottom: clamp(25px, 2.1vw, 40px);
+  justify-content: center;
+}
+.koje-filter-nav button {
+  padding: clamp(8px, 0.53vw, 10px) clamp(16px, 1.05vw, 20px);
+  border-radius: var(--koje-radius-pill);
+  font-weight: 600;
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-gray);
+  background-color: var(--ul-gray3);
+  border: none;
+  cursor: pointer;
+  transition: all var(--koje-transition-fast);
+}
+.koje-filter-nav button:hover,
+.koje-filter-nav button.active,
+.koje-filter-nav button.mixitup-control-active {
+  background-color: var(--ul-primary);
+  color: var(--white);
+}
+
+
+/* ============================================================
+   15. BADGE / TAG SYSTEM
+   ============================================================ */
+
+/* Base badge */
+.koje-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px clamp(10px, 0.74vw, 14px);
+  border-radius: var(--koje-radius-pill);
+  font-size: clamp(11px, 0.68vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* Filled variants */
+.koje-badge--primary {
+  background-color: var(--ul-primary);
+  color: var(--white);
+}
+.koje-badge--secondary {
+  background-color: var(--ul-secondary);
+  color: var(--white);
+}
+.koje-badge--dark {
+  background-color: var(--ul-black);
+  color: var(--white);
+}
+.koje-badge--light {
+  background-color: var(--ul-c3);
+  color: var(--ul-primary);
+}
+
+/* Outline variants */
+.koje-badge--outline-primary {
+  border: 1px solid var(--ul-primary);
+  color: var(--ul-primary);
+  background: transparent;
+}
+
+/* Status badges */
+.koje-badge--success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--koje-success);
+}
+.koje-badge--warning {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: var(--koje-warning);
+}
+.koje-badge--error {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--koje-error);
+}
+
+/* Category tags (for blog stories) */
+.koje-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: clamp(4px, 0.32vw, 6px) clamp(10px, 0.74vw, 14px);
+  background-color: var(--ul-c3);
+  border-radius: var(--koje-radius-pill);
+  font-size: clamp(12px, 0.74vw, 14px);
+  font-weight: 500;
+  color: var(--ul-primary);
+  transition: background-color var(--koje-transition-fast);
+}
+.koje-category-tag:hover {
+  background-color: var(--ul-primary);
+  color: var(--white);
+}
+
+
+/* ============================================================
+   16. IMPACT STATS
+   ============================================================ */
+
+.koje-impact-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(25px, 2.63vw, 50px);
+  justify-content: center;
+}
+.koje-impact-stat {
+  text-align: center;
+  min-width: 120px;
+}
+.koje-impact-stat-number {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(30px, 2.63vw, 50px);
+  color: var(--ul-primary);
+  line-height: 1;
+  margin-bottom: clamp(4px, 0.32vw, 6px);
+}
+.koje-impact-stat-label {
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-gray);
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   17. TIMELINE
+   ============================================================ */
+
+.koje-timeline {
+  position: relative;
+  padding-left: clamp(30px, 2.63vw, 50px);
+}
+.koje-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--ul-gray3);
+}
+.koje-timeline-item {
+  position: relative;
+  margin-bottom: clamp(30px, 2.63vw, 50px);
+  padding-left: clamp(15px, 1.26vw, 24px);
+}
+.koje-timeline-item:last-child {
+  margin-bottom: 0;
+}
+.koje-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * clamp(30px, 2.63vw, 50px) + 1px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--ul-primary);
+  border: 3px solid var(--ul-c3);
+  transform: translateX(-50%);
+}
+.koje-timeline-year {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(16px, 1.05vw, 20px);
+  color: var(--ul-primary);
+  margin-bottom: clamp(4px, 0.32vw, 6px);
+}
+.koje-timeline-title {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(18px, 1.26vw, 24px);
+  margin-bottom: clamp(6px, 0.42vw, 8px);
+}
+.koje-timeline-text {
+  font-size: clamp(13px, 0.84vw, 16px);
+  color: var(--ul-p);
+}
+
+
+/* ============================================================
+   18. VENDOR FORM STEPS
+   ============================================================ */
+
+.koje-vendor-form-steps {
+  display: flex;
+  justify-content: center;
+  gap: clamp(30px, 3.15vw, 60px);
+  margin-bottom: clamp(30px, 2.63vw, 50px);
+}
+.koje-vendor-form-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6px, 0.42vw, 8px);
+  position: relative;
+}
+.koje-vendor-form-step-number {
+  width: clamp(36px, 2.31vw, 44px);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--ul-gray3);
+  color: var(--ul-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: clamp(14px, 0.84vw, 16px);
+  transition: all var(--koje-transition-default);
+}
+.koje-vendor-form-step.active .koje-vendor-form-step-number {
+  background-color: var(--ul-primary);
+  color: var(--white);
+}
+.koje-vendor-form-step.completed .koje-vendor-form-step-number {
+  background-color: var(--koje-success);
+  color: var(--white);
+}
+.koje-vendor-form-step-label {
+  font-size: clamp(12px, 0.74vw, 14px);
+  font-weight: 500;
+  color: var(--ul-gray);
+}
+.koje-vendor-form-step.active .koje-vendor-form-step-label {
+  color: var(--ul-black);
+  font-weight: 600;
+}
+
+/* Connector line between steps */
+.koje-vendor-form-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: clamp(18px, 1.16vw, 22px);
+  left: calc(100% + clamp(5px, 0.42vw, 8px));
+  width: clamp(20px, 2.31vw, 44px);
+  height: 2px;
+  background-color: var(--ul-gray3);
+}
+.koje-vendor-form-step.completed:not(:last-child)::after {
+  background-color: var(--koje-success);
+}
+
+
+/* ============================================================
+   19. EVENT STATUS INDICATORS
+   ============================================================ */
+
+.koje-event-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(12px, 0.74vw, 14px);
+  font-weight: 600;
+}
+.koje-event-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.koje-event-status--upcoming::before {
+  background-color: var(--koje-success);
+}
+.koje-event-status--ongoing::before {
+  background-color: var(--ul-primary);
+  animation: pulse 2s infinite;
+}
+.koje-event-status--past::before {
+  background-color: var(--ul-gray2);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+
+/* ============================================================
+   20. CONTACT FORM SWITCHING
+   ============================================================ */
+
+.koje-contact-form-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.koje-contact-form-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+
+/* ============================================================
+   21. FOOTER CUSTOMIZATIONS
+   ============================================================ */
+
+/* Widen footer about column slightly for longer description */
+.ul-footer-about {
+  max-width: clamp(267px, 18vw, 310px);
+}
+
+/* Ensure "Get Involved" column has enough width */
+.ul-footer-widget:nth-child(3) {
+  min-width: clamp(140px, 12vw, 220px);
+}
+
+/* Footer contact links - remove default arrow icon */
+.ul-footer-contact-links a::before {
+  content: none;
+}
+
+/* Copyright bar text - match Koje branding */
+.ul-footer-bottom .copyright-txt {
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   22. ANIMATION ADDITIONS
+   ============================================================ */
+
+/* Smooth image zoom on card hover */
+.koje-arm-card-img img,
+.koje-gallery-item img,
+.ul-blog-img img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.koje-arm-card:hover .koje-arm-card-img img,
+.koje-gallery-item:hover img {
+  transform: scale(1.05);
+}
+.ul-blog:hover .ul-blog-img img {
+  transform: scale(1.03);
+}
+
+/* Subtle card lift effect */
+.koje-hover-lift {
+  transition: transform var(--koje-transition-default),
+              box-shadow var(--koje-transition-default);
+}
+.koje-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--koje-shadow-lg);
+}
+
+/* Fade transition for tab content */
+.ul-tab {
+  transition: opacity 0.3s ease;
+}
+
+
+/* ============================================================
+   23. RESPONSIVE ADDITIONS
+   ============================================================ */
+
+/* Stack event cards vertically on tablets */
+@media screen and (max-width: 767px) {
+  .ul-event {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ul-event-img {
+    max-width: 100%;
+  }
+}
+
+/* Gallery grid: 2 columns on tablet, 1 on phone */
+@media screen and (max-width: 767px) {
+  .koje-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .koje-gallery-item--wide {
+    grid-column: span 1;
+  }
+}
+@media screen and (max-width: 479px) {
+  .koje-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .koje-gallery-item--tall {
+    grid-row: span 1;
+  }
+  .koje-gallery-item--tall img {
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+}
+
+/* Contact form tabs: scroll horizontally on mobile */
+@media screen and (max-width: 575px) {
+  .koje-contact-tabs-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .koje-contact-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .koje-contact-tabs-nav button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+/* Impact stats: wrap to 2 columns on mobile */
+@media screen and (max-width: 575px) {
+  .koje-impact-stats {
+    gap: clamp(15px, 1.58vw, 30px);
+  }
+  .koje-impact-stat {
+    min-width: calc(50% - 15px);
+  }
+}
