@@ -9,7 +9,7 @@
     <meta name="description" content="Koje Group - Creativity, Culture & Community. Home of Koje Originals, Koje Essentials, Koje Production, Koje Initiative, and Koje Vision Screen.">
 
     {{-- Favicon --}}
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">    
 
     {{-- Google Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +26,9 @@
     <link rel="stylesheet" href="{{ asset('vendor/slim-select/slimselect.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/flatpickr/flatpickr.min.css') }}">
 
-    {{-- Icon Font --}}
+    {{-- Icon Fonts --}}
     <link rel="stylesheet" href="{{ asset('fonts/icon/flaticon_charitics.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     {{-- Legacy CSS (template + Koje custom overrides) --}}
     <link rel="stylesheet" href="{{ asset('css/legacy/style.css') }}">
@@ -52,16 +53,14 @@
 
     {{-- Mobile Sidebar --}}
     <div class="ul-sidebar">
-        <div class="ul-sidebar-top">
-            <div class="ul-sidebar-header-logo">
-                <a href="{{ route('home') }}" class="logo-text">KOJE GROUP</a>
-            </div>
-            <button class="ul-sidebar-closer">
-                <i class="flaticon-close"></i>
-            </button>
-        </div>
         <div class="ul-sidebar-header-nav-wrapper">
             {{-- Nav moves here in mobile via main.js --}}
+        </div>
+        <div class="ul-sidebar-cta" style="padding: 20px 25px;">
+            <a href="{{ route('webinar') }}" class="ul-btn" style="display:flex; align-items:center; justify-content:center; width:100%;">
+                <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+                Register for Webinar
+            </a>
         </div>
     </div>
 
@@ -76,7 +75,7 @@
     {{-- Bootstrap 5 JS (CDN) --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    {{-- Vendor JS --}}
+    {{-- Vendor JS --}}    
     <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/splide/splide.min.js') }}"></script>
     <script src="{{ asset('vendor/splide/splide-extension-auto-scroll.min.js') }}"></script>

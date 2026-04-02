@@ -9,19 +9,19 @@
             <div class="ul-header-top-left">
                 <div class="address">
                     <i class="flaticon-pin"></i>
-                    <span>Lagos, Nigeria</span>
+                    <span>2, Oluwakemi Street, Akowonjo,Lagos, Nigeria</span>
                 </div>
             </div>
             <div class="ul-header-top-social">
                 <span class="d-none d-sm-inline">Follow us:</span>
                 <div class="links">
-                    <a href="https://instagram.com/kojegroup" target="_blank" rel="noopener" aria-label="Instagram">
+                    <a href="https://instagram.com/koje_initiative" target="_blank" rel="noopener" aria-label="Instagram">
                         <i class="flaticon-instagram"></i>
                     </a>
-                    <a href="https://twitter.com/kojegroup" target="_blank" rel="noopener" aria-label="Twitter">
+                    <a href="https://twitter.com/koje_initiative" target="_blank" rel="noopener" aria-label="Twitter">
                         <i class="flaticon-twitter"></i>
                     </a>
-                    <a href="https://facebook.com/kojegroup" target="_blank" rel="noopener" aria-label="Facebook">
+                    <a href="https://facebook.com/koje_initiative" target="_blank" rel="noopener" aria-label="Facebook">
                         <i class="flaticon-facebook"></i>
                     </a>
                 </div>
@@ -136,7 +136,7 @@
             <div class="ul-header-actions">
                 {{-- Register for Webinar CTA --}}
                 <a href="{{ route('webinar') }}" class="ul-btn d-none d-lg-inline-flex">
-                    <i class="flaticon-right-arrow"></i>
+                    <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
                     Register for Webinar
                 </a>
 

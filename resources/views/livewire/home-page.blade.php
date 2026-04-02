@@ -35,7 +35,7 @@
                 {{-- Slide 2: KOJE ESSENTIALS --}}
                 <div class="swiper-slide">
                     <div class="ul-banner-2-slide">
-                        <img src="{{ asset('images/template/banner-2-slide-2.jpg') }}" alt="Koje Essentials - Ready-to-Wear" class="ul-banner-2-slide-bg-img">
+                        <img src="{{ asset('images/photos/BTA_3563.jpg') }}" alt="Koje Essentials - Ready-to-Wear" class="ul-banner-2-slide-bg-img">
                         <div class="row gy-4 align-items-center">
                             <div class="col-md-7">
                                 <div class="ul-banner-txt">
@@ -98,7 +98,7 @@
                 {{-- Slide 5: KOJE VISION SCREEN --}}
                 <div class="swiper-slide">
                     <div class="ul-banner-2-slide">
-                        <img src="{{ asset('images/template/banner-2-slide-2.jpg') }}" alt="Koje Vision Screen - Digital Advertising" class="ul-banner-2-slide-bg-img">
+                        <img src="{{ asset('images/photos/BTA_3563.jpg') }}" alt="Koje Vision Screen - Digital Advertising" class="ul-banner-2-slide-bg-img">
                         <div class="row gy-4 align-items-center">
                             <div class="col-md-7">
                                 <div class="ul-banner-txt">
@@ -124,7 +124,7 @@
                             <div class="col-md-7">
                                 <div class="ul-banner-txt">
                                     <div class="wow animate__fadeInUp">
-                                        <span class="ul-banner-sub-title ul-section-sub-title">March 29, 2025 -- Free Webinar</span>
+                                        <span class="ul-banner-sub-titl e ul-section-sub-title">March 29, 2025 -- Free Webinar</span>
                                         <h1 class="ul-banner-title">Creative Business Webinar: Build, Brand & Scale</h1>
                                         <p class="ul-banner-descr">Join top creative industry leaders for an immersive session on building a thriving creative business in Africa. Learn, network, and grow -- absolutely free.</p>
                                         <div class="ul-banner-btns">
@@ -164,65 +164,55 @@
         <div class="ul-container">
             <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 gy-4 justify-content-center">
 
-                {{-- Feature 1: Fashion Excellence --}}
+                {{-- Feature 1: Fashion Excellence (Scissors / Tailoring) --}}
                 <div class="col">
                     <div class="ul-feature">
                         <div class="ul-feature-icon">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                    <path d="M35.2962 9.02488L18.3509 3.04614C18.1239 2.96598 17.8762 2.96598 17.6491 3.04614L0.703829 9.02488C0.282517 9.17352 0.000563343 9.57149 8.42838e-07 10.0183C-0.000561657 10.465 0.280477 10.8636 0.701438 11.0132L17.6468 17.0374C17.761 17.0781 17.8805 17.0984 18 17.0984C18.1195 17.0984 18.239 17.0781 18.3532 17.0374L35.2986 11.0132C35.7195 10.8636 36.0005 10.465 36 10.0183C35.9994 9.57149 35.7175 9.17352 35.2962 9.02488Z" fill="#EB5310" />
-                                    <path d="M33.4668 23.1029V13.9032L31.3574 14.6531V23.1029C30.7221 23.4686 30.2939 24.1538 30.2939 24.9395C30.2939 25.7252 30.7221 26.4105 31.3574 26.7762V31.9593C31.3574 32.5418 31.8296 33.014 32.4121 33.014C32.9946 33.014 33.4668 32.5418 33.4668 31.9593V26.7762C34.1021 26.4106 34.5303 25.7253 34.5303 24.9396C34.5303 24.1538 34.1022 23.4686 33.4668 23.1029Z" fill="#EB5310" />
-                                    <path d="M18 19.2078C17.638 19.2078 17.2814 19.1463 16.9402 19.025L7.41406 15.6384V20.2796C7.41406 21.415 8.59862 22.3753 10.9348 23.1335C12.9711 23.7945 15.4803 24.1585 18 24.1585C20.5197 24.1585 23.0289 23.7945 25.0652 23.1335C27.4014 22.3753 28.586 21.415 28.586 20.2796V15.6384L19.0599 19.025C18.7186 19.1463 18.3621 19.2078 18 19.2078Z" fill="#EB5310" />
-                                </g>
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 3C4.34 3 3 4.34 3 6C3 7.31 3.84 8.41 5 8.83V15.17C3.84 15.59 3 16.69 3 18C3 19.66 4.34 21 6 21C7.66 21 9 19.66 9 18C9 16.69 8.16 15.59 7 15.17V8.83C8.16 8.41 9 7.31 9 6C9 4.34 7.66 3 6 3ZM6 5C6.55 5 7 5.45 7 6C7 6.55 6.55 7 6 7C5.45 7 5 6.55 5 6C5 5.45 5.45 5 6 5ZM6 19C5.45 19 5 18.55 5 18C5 17.45 5.45 17 6 17C6.55 17 7 17.45 7 18C7 18.55 6.55 19 6 19Z" fill="#EB5310"/>
+                                <path d="M21 12L12 3V8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16V21L21 12ZM12 14C10.9 14 10 13.1 10 12C10 10.9 10.9 10 12 10V14Z" fill="#EB5310"/>
                             </svg>
                         </div>
                         <h3 class="ul-feature-title">Fashion Excellence</h3>
                     </div>
                 </div>
 
-                {{-- Feature 2: Ready-to-Wear --}}
+                {{-- Feature 2: Ready-to-Wear (T-Shirt / Clothing) --}}
                 <div class="col">
                     <div class="ul-feature">
                         <div class="ul-feature-icon">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                    <path d="M17.99 4.74549C10.1431 -2.11775 0.165878 3.91249 0.00227293 12.0875C-0.0394192 14.1709 0.561988 16.2003 1.75911 18.0712H9.51849L10.8986 15.7709C11.2994 15.1031 12.2692 15.0816 12.6926 15.7474L15.6046 20.3232L19.8492 11.3624C20.2194 10.5806 21.3226 10.5557 21.7308 11.3139L25.3694 18.0712H34.2209C40.7779 7.82326 27.8191 -3.85132 17.99 4.74549Z" fill="#EB5310" />
-                                    <path d="M23.8108 19.6258L20.8624 14.1502L16.6931 22.952C16.3384 23.7008 15.2951 23.7658 14.8503 23.0667L11.8292 18.3194L11.0197 19.6684C10.8291 19.9861 10.4859 20.1804 10.1154 20.1804H3.42725C3.6369 20.3998 2.51951 19.2847 17.246 33.9348C17.6573 34.3441 18.3222 34.3442 18.7335 33.9348C33.2334 19.5101 32.343 20.3994 32.5523 20.1804H24.7393C24.3513 20.1805 23.9947 19.9674 23.8108 19.6258Z" fill="#EB5310" />
-                                </g>
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.45 2.4L12 5.1L8.55 2.4L2 6.6L4.8 10.2L6 9.6V21H18V9.6L19.2 10.2L22 6.6L15.45 2.4ZM16 19H8V8.55L6.4 9.35L4.65 7L8.1 4.6L12 7.5L15.9 4.6L19.35 7L17.6 9.35L16 8.55V19Z" fill="#EB5310"/>
+                                <path d="M10 12H14V14H10V12Z" fill="#EB5310"/>
                             </svg>
                         </div>
                         <h3 class="ul-feature-title">Ready-to-Wear</h3>
                     </div>
                 </div>
 
-                {{-- Feature 3: Production Power --}}
+                {{-- Feature 3: Production Power (Factory / Gears) --}}
                 <div class="col">
                     <div class="ul-feature">
                         <div class="ul-feature-icon">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2078 7.34403L20.5198 4.10403L20.1598 3.81603C19.2238 2.95203 17.7838 2.95203 16.9198 3.81603L15.6238 5.11203C15.6238 5.18403 16.1278 5.97603 17.2078 7.34403Z" fill="#FC633B" />
-                                <path d="M30.528 20.088L30.6 20.16L31.896 18.864C32.184 18.576 32.4 18.216 32.472 17.784L29.304 19.296C29.736 19.584 30.168 19.8 30.528 20.088Z" fill="#FC633B" />
-                                <path d="M26.4238 3.60002C26.8558 3.38402 27.2158 3.31202 27.6478 3.31202C28.0798 3.31202 28.5118 3.38402 28.9438 3.60002L27.1438 1.80002C26.2078 0.864022 24.6958 0.864022 23.7598 1.80002L18.0718 7.48802L26.4238 3.60002Z" fill="#FC633B" />
-                                <path d="M34.3438 9.07204L30.3838 5.04004L33.9838 12.744L34.3438 12.384C35.2798 11.52 35.2798 10.008 34.3438 9.07204Z" fill="#FC633B" />
-                                <path d="M29.736 5.40002C29.232 4.24802 27.864 3.81602 26.784 4.32002L18 8.42402C18.432 9.00002 18.864 9.50402 19.368 10.008L25.92 6.91202C26.424 8.06402 27.792 8.56802 28.944 7.99202L31.248 12.888C30.096 13.392 29.592 14.76 30.168 15.912L27 17.424C27.576 17.856 28.08 18.288 28.656 18.72C28.728 18.792 28.728 18.792 28.8 18.792L32.76 16.92C33.912 16.416 34.344 15.048 33.84 13.968L29.736 5.40002Z" fill="#FC633B" />
-                                <path d="M24.5519 13.032C23.9039 11.664 22.6079 11.016 21.5279 11.52C21.3119 11.592 21.0959 11.736 20.9519 11.952C22.1039 13.176 23.3279 14.328 24.6239 15.48C24.9839 14.76 24.9839 13.896 24.5519 13.032Z" fill="#FC633B" />
-                                <path d="M15.0479 5.61603L1.58386 19.152C1.36786 19.368 1.22386 19.584 1.15186 19.8L3.45586 19.512H3.88786C4.82386 19.512 5.68786 19.872 6.33586 20.52L15.2639 29.52C15.9839 30.24 16.3439 31.32 16.2719 32.4L15.9839 34.704C16.1999 34.632 16.4159 34.488 16.6319 34.272L30.1679 20.736C29.5199 20.232 28.8719 19.8 28.2239 19.296C22.9679 15.264 18.5759 10.728 15.0479 5.61603Z" fill="#FC633B" />
-                                <path d="M5.75988 21.024C5.18388 20.448 4.31988 20.16 3.52788 20.232L1.00788 20.592C0.935885 21.168 1.15188 21.744 1.65588 22.248L13.6799 34.272C14.1119 34.704 14.7599 34.92 15.3359 34.92L15.6959 32.4C15.7679 31.536 15.5519 30.744 14.9039 30.168L5.75988 21.024Z" fill="#FC633B" />
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 22H2V10L8 14V10L14 14V10L22 14V22ZM4 20H20V15.5L14 12V16L8 12V16L4 13.5V20Z" fill="#EB5310"/>
+                                <path d="M9 2L12 8H6L9 2Z" fill="#EB5310"/>
+                                <path d="M17 4C18.66 4 20 5.34 20 7C20 8.66 18.66 10 17 10C15.34 10 14 8.66 14 7C14 5.34 15.34 4 17 4ZM17 6C16.45 6 16 6.45 16 7C16 7.55 16.45 8 17 8C17.55 8 18 7.55 18 7C18 6.45 17.55 6 17 6Z" fill="#EB5310"/>
                             </svg>
                         </div>
                         <h3 class="ul-feature-title">Production Power</h3>
                     </div>
                 </div>
 
-                {{-- Feature 4: Creative Commerce --}}
+                {{-- Feature 4: Creative Commerce (Lightbulb + Cart) --}}
                 <div class="col">
                     <div class="ul-feature">
                         <div class="ul-feature-icon">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M35.0999 16.642C35.0999 20.5527 31.9271 23.6886 28.0533 23.6886H8.79504C4.44164 23.6886 0.899902 20.1469 0.899902 15.7935C0.899902 11.2187 4.81058 7.52937 9.45911 7.8983C10.8242 3.91386 14.6611 1.10999 18.9407 1.10999C23.9951 1.10999 28.164 4.79931 28.865 9.66919C32.3698 10.0381 35.0999 13.0265 35.0999 16.642Z" fill="#FC633B" />
-                                <path d="M8.15492 27.637C10.0519 30.594 10.0519 31.5425 10.0519 31.8493C10.0519 33.5231 8.68495 34.89 7.01117 34.89C5.33739 34.89 3.97046 33.5231 3.97046 31.8493C3.97046 31.5425 3.97046 30.6219 5.86741 27.637C6.09058 27.2464 6.53693 27.0233 6.98326 27.0233C7.45751 27.0233 7.87595 27.2464 8.15492 27.637Z" fill="#FC633B" />
-                                <path d="M19.1437 27.637C21.0406 30.594 21.0406 31.5425 21.0406 31.8493C21.0406 33.5231 19.6737 34.89 17.9999 34.89C16.3262 34.89 14.9592 33.5231 14.9592 31.8493C14.9592 31.5425 14.9592 30.6219 16.8562 27.637C17.0793 27.2464 17.5257 27.0233 17.972 27.0233C18.4463 27.0233 18.8647 27.2464 19.1437 27.637Z" fill="#FC633B" />
-                                <path d="M30.1325 27.637C32.0294 30.594 32.0294 31.5425 32.0294 31.8493C32.0294 33.5231 30.6625 34.89 28.9887 34.89C27.3149 34.89 25.948 33.5231 25.948 31.8493C25.948 31.5425 25.948 30.6219 27.8449 27.637C28.0681 27.2464 28.5145 27.0233 28.9608 27.0233C29.435 27.0233 29.8535 27.2464 30.1325 27.637Z" fill="#FC633B" />
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 11.38 6.19 13.47 8 14.74V17C8 17.55 8.45 18 9 18H15C15.55 18 16 17.55 16 17V14.74C17.81 13.47 19 11.38 19 9C19 5.13 15.87 2 12 2ZM14.85 13.1L14 13.7V16H10V13.7L9.15 13.1C7.8 12.16 7 10.63 7 9C7 6.24 9.24 4 12 4C14.76 4 17 6.24 17 9C17 10.63 16.2 12.16 14.85 13.1Z" fill="#EB5310"/>
+                                <path d="M9 20H15V21C15 21.55 14.55 22 14 22H10C9.45 22 9 21.55 9 21V20Z" fill="#EB5310"/>
+                                <path d="M11 9H13V13H11V9Z" fill="#FAA019"/>
+                                <path d="M10 8H14V10H10V8Z" fill="#FAA019"/>
                             </svg>
                         </div>
                         <h3 class="ul-feature-title">Creative Commerce</h3>
@@ -281,7 +271,7 @@
                 <div class="col">
                     <div class="ul-about-imgs ul-about-2-img">
                         <div class="img-wrapper">
-                            <img src="{{ asset('images/template/about-2-img.jpg') }}" alt="About Koje Group">
+                            <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="About Koje Group">
                         </div>
                         <div class="ul-about-2-stat">
                             <span class="number">5</span>
@@ -347,7 +337,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/photos/BTA_3563.jpg') }}" alt="Koje Originals">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Originals">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-originals') }}">Koje Originals</a></h3>
@@ -361,7 +351,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/template/service-2.jpg') }}" alt="Koje Essentials">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Essentials">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-essentials') }}">Koje Essentials</a></h3>
@@ -375,7 +365,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/photos/BTA_3479.jpg') }}" alt="Koje Production">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Production">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-production') }}">Koje Production</a></h3>
@@ -389,7 +379,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/photos/BTA_3252.jpg') }}" alt="Koje Initiative">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Initiative">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-initiative') }}">Koje Initiative</a></h3>
@@ -403,7 +393,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/template/service-4.jpg') }}" alt="Koje Vision Screen">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Vision Screen">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-vision-screen') }}">Koje Vision Screen</a></h3>
@@ -417,7 +407,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/photos/BTA_3563.jpg') }}" alt="Koje Originals">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Originals">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-originals') }}">Koje Originals</a></h3>
@@ -430,7 +420,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/template/service-2.jpg') }}" alt="Koje Essentials">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Essentials">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-essentials') }}">Koje Essentials</a></h3>
@@ -443,7 +433,7 @@
                     <div class="swiper-slide">
                         <div class="ul-service">
                             <div class="ul-service-img">
-                                <img src="{{ asset('images/photos/BTA_3479.jpg') }}" alt="Koje Production">
+                                <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Koje Production">
                             </div>
                             <div class="ul-service-txt">
                                 <h3 class="ul-service-title"><a href="{{ route('koje-production') }}">Koje Production</a></h3>
@@ -775,7 +765,7 @@
                 {{-- Image --}}
                 <div class="col-lg-5">
                     <div class="ul-contact-img">
-                        <img src="{{ asset('images/template/contact-img.jpg') }}" alt="Contact Koje Group">
+                        <img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Contact Koje Group">
                     </div>
                 </div>
 
@@ -842,7 +832,7 @@
                 {{-- Blog 1 --}}
                 <div class="col">
                     <div class="ul-blog ul-blog-2">
-                        <div class="ul-blog-img"><img src="{{ asset('images/photos/BTA_3583.jpg') }}" alt="Blog Image">
+                        <div class="ul-blog-img"><img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Blog Image">
                             <div class="date">
                                 <span class="number">29</span>
                                 <span class="txt">Mar</span>
@@ -868,7 +858,7 @@
                 {{-- Blog 2 --}}
                 <div class="col">
                     <div class="ul-blog ul-blog-2">
-                        <div class="ul-blog-img"><img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Blog Image">
+                        <div class="ul-blog-img"><img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Blog - Fashion">
                             <div class="date">
                                 <span class="number">15</span>
                                 <span class="txt">Feb</span>
@@ -894,7 +884,7 @@
                 {{-- Blog 3 --}}
                 <div class="col">
                     <div class="ul-blog ul-blog-2">
-                        <div class="ul-blog-img"><img src="{{ asset('images/photos/BTA_3261.jpg') }}" alt="Blog Image">
+                        <div class="ul-blog-img"><img src="{{ asset('images/photos/BTA_3420.jpg') }}" alt="Blog Image">
                             <div class="date">
                                 <span class="number">01</span>
                                 <span class="txt">Feb</span>

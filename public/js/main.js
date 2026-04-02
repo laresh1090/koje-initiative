@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (document.querySelector(".ul-header-nav")) {
         const ulSidebar = document.querySelector(".ul-sidebar");
         const ulSidebarOpener = document.querySelector(".ul-header-sidebar-opener");
-        const ulSidebarCloser = document.querySelector(".ul-sidebar-closer");
+        // ul-sidebar-closer removed — hamburger handles toggle
         const ulMobileMenuContent = document.querySelector(".to-go-to-sidebar-in-mobile");
         const ulHeaderNavMobileWrapper = document.querySelector(".ul-sidebar-header-nav-wrapper");
         const ulHeaderNavOgWrapper = document.querySelector(".ul-header-nav-wrapper");
@@ -30,11 +30,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
 
         ulSidebarOpener.addEventListener("click", () => {
-            ulSidebar.classList.add("active");
+            ulSidebar.classList.toggle("active");
         });
 
-        ulSidebarCloser.addEventListener("click", () => {
-            ulSidebar.classList.remove("active");
+        // Close sidebar when clicking outside
+        document.addEventListener("click", (e) => {
+            if (ulSidebar.classList.contains("active") &&
+                !ulSidebar.contains(e.target) &&
+                !ulSidebarOpener.contains(e.target)) {
+                ulSidebar.classList.remove("active");
+            }
         });
 
 

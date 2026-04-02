@@ -38,18 +38,18 @@
                     {{-- Date / Time --}}
                     <div class="wow fadeInUp" data-wow-delay="0.3s"
                          style="display: inline-flex; align-items: center; gap: clamp(8px, 0.7vw, 14px); flex-wrap: wrap; justify-content: center; padding: 12px 28px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); margin-bottom: clamp(25px, 2vw, 40px);">
-                        <span style="color: #FAA019; font-weight: 700; font-size: clamp(14px, 0.9vw, 17px);">March 29th, 2026</span>
+                        <span style="color: #FAA019; font-weight: 700; font-size: clamp(14px, 0.9vw, 17px);">April 25th, 2026</span>
                         <span style="color: rgba(255,255,255,0.3);">|</span>
-                        <span style="color: rgba(255,255,255,0.85); font-weight: 500; font-size: clamp(14px, 0.9vw, 17px);">10:00 AM WAT</span>
+                        <span style="color: rgba(255,255,255,0.85); font-weight: 500; font-size: clamp(14px, 0.9vw, 17px);">9:00 AM WAT</span>
                         <span style="color: rgba(255,255,255,0.3);">|</span>
-                        <span style="color: rgba(255,255,255,0.85); font-weight: 500; font-size: clamp(14px, 0.9vw, 17px);">Online</span>
+                        <span style="color: rgba(255,255,255,0.85); font-weight: 500; font-size: clamp(14px, 0.9vw, 17px);">Zoom</span>
                     </div>
 
                     {{-- Countdown Timer --}}
                     <div class="wow fadeInUp" data-wow-delay="0.4s"
                          x-data="{
                              days: 0, hours: 0, minutes: 0, seconds: 0,
-                             targetDate: new Date('2026-03-29T10:00:00+01:00').getTime(),
+                             targetDate: new Date('2026-04-25T09:00:00+01:00').getTime(),
                              expired: false,
                              init() {
                                  this.updateCountdown();
@@ -203,14 +203,14 @@
             <div class="row g-3 g-lg-4 justify-content-center">
                 @php
                     $attendees = [
-                        ['icon' => 'flaticon-love', 'title' => 'Fashion Designers'],
-                        ['icon' => 'flaticon-creativity', 'title' => 'Artists'],
-                        ['icon' => 'flaticon-photo-camera', 'title' => 'Photographers'],
-                        ['icon' => 'flaticon-video-camera', 'title' => 'Content Creators'],
-                        ['icon' => 'flaticon-handicraft', 'title' => 'Craft Makers'],
-                        ['icon' => 'flaticon-music', 'title' => 'Musicians'],
-                        ['icon' => 'flaticon-pen', 'title' => 'Writers'],
-                        ['icon' => 'flaticon-rocket', 'title' => 'Entrepreneurs'],
+                        ['icon' => 'fa-solid fa-shirt', 'title' => 'Fashion Designers'],
+                        ['icon' => 'fa-solid fa-palette', 'title' => 'Artists'],
+                        ['icon' => 'fa-solid fa-camera', 'title' => 'Photographers'],
+                        ['icon' => 'fa-solid fa-video', 'title' => 'Content Creators'],
+                        ['icon' => 'fa-solid fa-scissors', 'title' => 'Craft Makers'],
+                        ['icon' => 'fa-solid fa-music', 'title' => 'Musicians'],
+                        ['icon' => 'fa-solid fa-pen-nib', 'title' => 'Writers'],
+                        ['icon' => 'fa-solid fa-rocket', 'title' => 'Entrepreneurs'],
                     ];
                 @endphp
 
@@ -251,12 +251,12 @@
             <div class="row g-3 g-lg-4 justify-content-center">
                 @php
                     $details = [
-                        ['icon' => 'flaticon-calendar', 'label' => 'Date', 'value' => 'March 29th, 2026'],
-                        ['icon' => 'flaticon-clock', 'label' => 'Time', 'value' => '10:00 AM WAT'],
-                        ['icon' => 'flaticon-hourglass', 'label' => 'Duration', 'value' => '2 - 3 Hours'],
-                        ['icon' => 'flaticon-video-camera', 'label' => 'Platform', 'value' => 'Online - Zoom'],
-                        ['icon' => 'flaticon-gift', 'label' => 'Cost', 'value' => 'Completely Free'],
-                        ['icon' => 'flaticon-pen', 'label' => 'Requirements', 'value' => 'A notebook & an open mind'],
+                        ['icon' => 'fa-solid fa-calendar-days', 'label' => 'Date', 'value' => 'April 25th, 2026'],
+                        ['icon' => 'fa-solid fa-clock', 'label' => 'Time', 'value' => '9:00 AM WAT'],
+                        ['icon' => 'fa-solid fa-hourglass-half', 'label' => 'Duration', 'value' => '2 Hours'],
+                        ['icon' => 'fa-solid fa-video', 'label' => 'Platform', 'value' => 'Online - Zoom'],
+                        ['icon' => 'fa-solid fa-gift', 'label' => 'Cost', 'value' => 'Completely Free'],
+                        ['icon' => 'fa-solid fa-pen', 'label' => 'Requirements', 'value' => 'A notebook & an open mind'],
                     ];
                 @endphp
 
@@ -349,6 +349,15 @@
 
                         {{-- Success Message --}}
                         @if($showSuccess)
+                            <script>
+                                Swal.fire({
+                                    title: 'Congratulations!',
+                                    text: 'You\'re Registered! We\'ll send you the webinar link via email before April 25th.',
+                                    icon: 'success',
+                                    confirmButtonText: 'OK',
+                                    confirmButtonColor: '#EB5310'
+                                });
+                            </script>
                             <div style="background: rgba(46,204,113,0.08); border: 1px solid rgba(46,204,113,0.3); border-radius: var(--koje-radius-md); padding: clamp(20px, 1.6vw, 30px); text-align: center; margin-bottom: 0;">
                                 <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(46,204,113,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
                                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -356,10 +365,10 @@
                                     </svg>
                                 </div>
                                 <h5 style="font-family: var(--font-quicksand); font-weight: 700; font-size: clamp(18px, 1.2vw, 22px); color: #1E252F; margin-bottom: 8px;">
-                                    You're Registered!
+                                    Congratulations! You're Registered!
                                 </h5>
                                 <p style="color: var(--ul-p); font-size: clamp(14px, 0.9vw, 16px); margin: 0; line-height: 1.6;">
-                                    We'll send you the webinar link via email before March 29th. Check your inbox!
+                                    We'll send you the webinar link via email before April 25th. Check your inbox!
                                 </p>
                             </div>
                         @else
@@ -433,18 +442,9 @@
                                 {{-- Submit Button --}}
                                 <button type="submit"
                                         class="ul-btn ul-btn--full"
-                                        wire:loading.attr="disabled"
-                                        style="height: clamp(50px, 3.2vw, 60px); border-radius: var(--koje-radius-sm); font-size: clamp(14px, 0.95vw, 17px); margin-top: clamp(8px, 0.6vw, 12px);">
-                                    <span wire:loading.remove wire:target="register">
-                                        <i class="flaticon-right-arrow"></i>
-                                        Register Now
-                                    </span>
-                                    <span wire:loading wire:target="register" style="display: inline-flex; align-items: center; gap: 10px;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 0.8s linear infinite;">
-                                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                                        </svg>
-                                        Registering...
-                                    </span>
+                                        style="margin-top: clamp(8px, 0.6vw, 12px);">
+                                    <i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+                                    Register Now
                                 </button>
                             </form>
                         @endif
@@ -478,7 +478,7 @@
                                 ],
                                 [
                                     'question' => 'How do I join the webinar?',
-                                    'answer' => 'Simply register using the form above. Once registered, we will send you the Zoom meeting link via email before the event date. Make sure to check your inbox (and spam folder) closer to March 29th.',
+                                    'answer' => 'Simply register using the form above. Once registered, we will send you the Zoom meeting link via email before the event date. Make sure to check your inbox (and spam folder) closer to March 28th.',
                                 ],
                                 [
                                     'question' => 'Will there be a recording available?',
@@ -551,7 +551,7 @@
                     </h2>
                     <p class="wow fadeInUp" data-wow-delay="0.1s"
                        style="color: rgba(255,255,255,0.7); font-size: clamp(15px, 1vw, 18px); max-width: 520px; margin: 0 auto clamp(24px, 2vw, 40px); line-height: 1.7;">
-                        Secure your spot now and take the first step toward building a profitable creative business. March 29th, 2026.
+                        Secure your spot now and take the first step toward building a profitable creative business. March 28th, 2026.
                     </p>
 
                     {{-- CTA Button --}}
@@ -569,7 +569,7 @@
                         </p>
                         <div style="display: flex; justify-content: center; gap: clamp(10px, 0.8vw, 16px);">
                             {{-- WhatsApp Share --}}
-                            <a href="https://wa.me/?text={{ urlencode('Join me at the Creative Business Webinar by Koje Initiative! Free online event on March 29th, 2026. Register here: ' . url('/webinar')) }}"
+                            <a href="https://wa.me/?text={{ urlencode('Join me at the Creative Business Webinar by Koje Initiative! Free online event on March 28th, 2026. Register here: ' . url('/webinar')) }}"
                                target="_blank"
                                rel="noopener noreferrer"
                                style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 999px; background: #25D366; color: #fff; font-weight: 700; font-size: clamp(13px, 0.84vw, 15px); text-decoration: none; transition: all 0.3s ease;"
@@ -582,7 +582,7 @@
                             </a>
 
                             {{-- Twitter / X Share --}}
-                            <a href="https://twitter.com/intent/tweet?text={{ urlencode('Join the Creative Business Webinar by @KojeGroup! Free online event for creative entrepreneurs. March 29th, 2026.') }}&url={{ urlencode(url('/webinar')) }}"
+                            <a href="https://twitter.com/intent/tweet?text={{ urlencode('Join the Creative Business Webinar by @KojeGroup! Free online event for creative entrepreneurs. March 28th, 2026.') }}&url={{ urlencode(url('/webinar')) }}"
                                target="_blank"
                                rel="noopener noreferrer"
                                style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 999px; background: #000; color: #fff; font-weight: 700; font-size: clamp(13px, 0.84vw, 15px); text-decoration: none; transition: all 0.3s ease;"
